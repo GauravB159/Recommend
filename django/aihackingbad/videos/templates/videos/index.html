@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'videos/stylesheets/index.css' %}"/>
+
+</head>
+<body>
+    <p>This is index page</p>
+    <form method="get" enctype="multipart/form-data" action="upload/">
+    {% csrf_token %}
+    	<input type="file" name="video">
+    	<input type="submit">
+    </form>
+</body>
+</html>
